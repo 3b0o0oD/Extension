@@ -144,7 +144,7 @@ export class YouTubeMusicContentController implements ContentController {
       ?.textContent?.split('\u2022');
     const albumName = additionalInfo?.[1]?.trim() ?? '';
     const albumCoverUrl =
-      document.querySelector('#song-image img')?.getAttribute('src') ?? '';
+      document.querySelector('thumbnail-image-wrapper style-scope ytmusic-player-bar')?.getAttribute('src') ?? '';
 
     const videoData = this.getPlayer().getVideoData();
     const artistName = videoData.author;
